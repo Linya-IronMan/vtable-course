@@ -1,12 +1,20 @@
 {
 	"name": "vtable-course",
 	"version": "0.0.0",
+	"type": "module",
 	"scripts": {
 		"dev": "parcel index.html",
 		"build": "parcel build index.html"
 	},
 	"devDependencies": {
 		"parcel": "^2.16.3"
+	},
+	"dependencies": {
+		"@visactor/vtable": "1.22.9",
+		"@visactor/vtable-editors": "1.22.9",
+		"@visactor/vutils": "^1.0.21",
+		"react": "^19.2.3",
+		"react-dom": "^19.2.3"
 	},
 	"keywords": [],
 	"author": "",
