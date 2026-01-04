@@ -1,0 +1,28 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/temp/**",
+    "**/ywasm/**",
+    "**/public/**",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.cjs",
+    "**/*.yml",
+    "**/*.yaml",
+    "**/*.md",
+    "**/*.conf",
+    "**/*.tsbuildinfo",
+    "**/*.svg"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "project-words",
+      "path": "./plugins/project-words.txt",
+      "addWords": true
+    }
+  ],
+  "dictionaries": ["project-words"]
+}
