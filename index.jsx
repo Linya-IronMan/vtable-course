@@ -1155,3 +1155,5 @@ const container = document.getElementById("main");
 
 const instance = new VTable.ListTable(container, option);
 window.tableInstance = instance;
+
+addEventListeners(instance);
