@@ -17,6 +17,9 @@ importers:
       '@visactor/vutils':
         specifier: ^1.0.21
         version: 1.0.21
+      pikaday:
+        specifier: ^1.8.2
+        version: 1.8.2
       react:
         specifier: ^19.2.3
         version: 19.2.3
@@ -24,6 +27,9 @@ importers:
         specifier: ^19.2.3
         version: 19.2.3(react@19.2.3)
     devDependencies:
+      '@types/pikaday':
+        specifier: ^1.7.10
+        version: 1.7.10
       parcel:
         specifier: ^2.16.3
         version: 2.16.3(@swc/helpers@0.5.18)
@@ -668,6 +674,9 @@ packages:
   '@turf/rewind@6.5.0':
     resolution: {integrity: sha512-IoUAMcHWotBWYwSYuYypw/LlqZmO+wcBpn8ysrBNbazkFNkLf3btSDZMkKJO/bvOzl55imr/Xj4fi3DdsLsbzQ==}
 
+  '@types/pikaday@1.7.10':
+    resolution: {integrity: sha512-5Xbp28ocWHVe24/L2+chHFtB9Ac+Q3q2UdqktUhS6PeYgrqzD0dBIQZUitw+DnqkJns0YrJYoeNWO2iwCu2MRg==}
+
   '@visactor/vdataset@1.0.21':
     resolution: {integrity: sha512-ZY1LFZsiZ3lHnDydQGoVJfuVAk6WWddSQXrWxFM4g+59OeByNJwLCf+46QtbJIjeRrJU7qgr+L2mlI4Mz3qeWQ==}
 
@@ -984,6 +993,9 @@ packages:
   minimist@1.2.6:
     resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
 
+  moment@2.30.1:
+    resolution: {integrity: sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==}
+
   msgpackr-extract@3.0.3:
     resolution: {integrity: sha512-P0efT1C9jIdVRefqjzOQ9Xml57zpOXnIuS+csaB4MdZbTdmGDLo8XhzBG1N7aO11gKDDkJvBLULeFTo46wwreA==}
     hasBin: true
@@ -1041,6 +1053,9 @@ packages:
   picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
+
+  pikaday@1.8.2:
+    resolution: {integrity: sha512-TNtsE+34BIax3WtkB/qqu5uepV1McKYEgvL3kWzU7aqPCpMEN6rBF3AOwu4WCwAealWlBGobXny/9kJb49C1ew==}
 
   point-at-length@1.1.0:
     resolution: {integrity: sha512-nNHDk9rNEh/91o2Y8kHLzBLNpLf80RYd2gCun9ss+V0ytRSf6XhryBTx071fesktjbachRmGuUbId+JQmzhRXw==}
@@ -2022,6 +2037,10 @@ snapshots:
       '@turf/invariant': 6.5.0
       '@turf/meta': 6.5.0
 
+  '@types/pikaday@1.7.10':
+    dependencies:
+      moment: 2.30.1
+
   '@visactor/vdataset@1.0.21':
     dependencies:
       '@turf/flatten': 6.5.0
@@ -2343,6 +2362,8 @@ snapshots:
 
   minimist@1.2.6: {}
 
+  moment@2.30.1: {}
+
   msgpackr-extract@3.0.3:
     dependencies:
       node-gyp-build-optional-packages: 5.2.2
@@ -2418,6 +2439,8 @@ snapshots:
   picocolors@1.1.1: {}
 
   picomatch@2.3.1: {}
+
+  pikaday@1.8.2: {}
 
   point-at-length@1.1.0:
     dependencies:

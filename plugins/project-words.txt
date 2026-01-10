@@ -1,4 +1,5 @@
 doubleclick
+Pikaday
 visactor
 vtable
 ywasm

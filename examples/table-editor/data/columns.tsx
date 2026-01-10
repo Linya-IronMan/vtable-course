@@ -13,4 +13,5 @@ export const columns: ColumnsDefine = [
 	{ title: "gender", field: "gender", editor: "list-editor" },
 	{ title: "address", field: "address", editor: "textArea-editor" },
 	{ title: "birthday", field: "birthDate", editor: "date-editor" },
+	{ title: "自定义日期编辑器", field: "customDate", editor: "custom-date" },
 ];

@@ -6,12 +6,14 @@
 		"dev:table-editor": "cd examples/table-editor && parcel index.html"
 	},
 	"devDependencies": {
+		"@types/pikaday": "^1.7.10",
 		"parcel": "^2.16.3"
 	},
 	"dependencies": {
 		"@visactor/vtable": "1.22.9",
 		"@visactor/vtable-editors": "1.22.9",
 		"@visactor/vutils": "^1.0.21",
+		"pikaday": "^1.8.2",
 		"react": "^19.2.3",
 		"react-dom": "^19.2.3"
 	},
