@@ -1,5 +1,6 @@
 doubleclick
 Pikaday
+vchart
 visactor
 vtable
 ywasm

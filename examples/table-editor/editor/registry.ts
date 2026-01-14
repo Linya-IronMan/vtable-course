@@ -1,10 +1,12 @@
 import { register } from "@visactor/vtable";
+import VChart from "@visactor/vchart";
 import {
 	TextAreaEditor,
 	DateInputEditor,
 	ListEditor,
 } from "@visactor/vtable-editors";
 import { InputEditor } from "@visactor/vtable-editors";
+
 import { DateEditor } from "./date-editor";
 
 const inputEditor = new InputEditor();
@@ -18,3 +20,6 @@ register.editor("textArea-editor", textAreaEditor);
 register.editor("date-editor", dateInputEditor);
 register.editor("list-editor", listEditor);
 register.editor("custom-date", custom_date_editor);
+
+// 注册 vchart 图表模块
+register.chartModule("vchart", VChart);
