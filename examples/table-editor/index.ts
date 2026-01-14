@@ -9,7 +9,8 @@ const option: ListTableConstructorOptions = {
 	container: document.getElementById("container"),
 	columns,
 	records,
-	defaultRowHeight: 400,
+	defaultRowHeight: 300,
+	defaultHeaderRowHeight: [30],
 	editCellTrigger: "doubleclick",
 };
 
