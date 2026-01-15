@@ -23,7 +23,7 @@ export const columns: ColumnsDefine = [
 		chartSpec: {
 			// VChart 配置项
 			type: "area",
-			data: { id: "data" }, // 数据来源为当前单元格字段
+			data: { id: "data" }, // 固定配置，数据来源为当前单元格字段
 			xField: "x",
 			yField: "y",
 			seriesField: "type",
