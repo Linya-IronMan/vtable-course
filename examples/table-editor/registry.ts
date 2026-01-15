@@ -7,7 +7,7 @@ import {
 } from "@visactor/vtable-editors";
 import { InputEditor } from "@visactor/vtable-editors";
 
-import { DateEditor } from "./date-editor";
+import { DateEditor } from "./editor/date-editor";
 
 const inputEditor = new InputEditor();
 const textAreaEditor = new TextAreaEditor();
