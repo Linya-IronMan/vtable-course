@@ -1,25 +1,35 @@
 import { ColumnsDefine } from "@visactor/vtable";
+import { headerFilterIcon } from "../icon/base";
+import { TableChartModule, TableEditorType } from "../constants";
 
 export const columns: ColumnsDefine = [
 	{
 		title: "name",
 		field: "name",
 		editor: (args) => {
-			if (args.row % 2 == 0) return "name-editor";
+			if (args.row % 2 == 0) return TableEditorType.NAME_EDITOR;
 			else return "name-editor2";
 		},
 	},
-	{ title: "age", field: "age", editor: "number-editor" },
-	{ title: "gender", field: "gender", editor: "list-editor" },
-	{ title: "address", field: "address", editor: "textArea-editor" },
-	{ title: "birthday", field: "birthDate", editor: "date-editor" },
-	{ title: "自定义日期编辑器", field: "customDate", editor: "custom-date" },
+	{ title: "age", field: "age", editor: TableEditorType.NUMBER_EDITOR },
+	{ title: "gender", field: "gender", editor: TableEditorType.LIST_EDITOR },
+	{ title: "address", field: "address", editor: TableEditorType.TEXT_EDITOR },
+	{
+		title: "birthday",
+		field: "birthDate",
+		editor: TableEditorType.DATE_EDITOR,
+	},
+	{
+		title: "自定义日期编辑器",
+		field: "customDate",
+		editor: TableEditorType.CUSTOM_DATE_EDITOR,
+	},
 	{
 		field: "areaChart", // 对应 records 中的数据字段
 		title: "Area Chart",
 		width: 320,
-		cellType: "chart", // 单元格类型为图表
-		chartModule: "vchart", // 关联注册的图表模块
+		cellType: "chart",
+		chartModule: TableChartModule.VCHART, // 关联注册的图表模块
 		chartSpec: {
 			// VChart 配置项
 			type: "area",
@@ -27,7 +37,7 @@ export const columns: ColumnsDefine = [
 			xField: "x",
 			yField: "y",
 			seriesField: "type",
-			// 其他图表样式配置...
 		},
+		headerIcon: headerFilterIcon,
 	},
 ];
