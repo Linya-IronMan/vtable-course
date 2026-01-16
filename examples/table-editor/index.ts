@@ -17,3 +17,10 @@ const option: ListTableConstructorOptions = {
 const container = document.getElementById("main")!;
 
 const instance = new VTable.ListTable(container, option);
+
+instance.addEventListener("icon_click", (args) => {
+	console.info("event_icon_click", args);
+	if (args.name === "text-button") {
+		console.log("文本图标被点击", args.row, args.col);
+	}
+});

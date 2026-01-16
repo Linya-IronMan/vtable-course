@@ -1,4 +1,4 @@
-import { register } from "@visactor/vtable";
+import { register, TYPES } from "@visactor/vtable";
 import VChart from "@visactor/vchart";
 import {
 	TextAreaEditor,
@@ -9,6 +9,7 @@ import { InputEditor } from "@visactor/vtable-editors";
 
 import { DateEditor } from "./editor/date-editor";
 import { TableChartModule, TableEditorType } from "./constants";
+import { textIcon } from "./icon/text-icon";
 
 const inputEditor = new InputEditor();
 const textAreaEditor = new TextAreaEditor();
@@ -24,3 +25,6 @@ register.editor(TableEditorType.CUSTOM_DATE_EDITOR, custom_date_editor);
 
 // 注册 vchart 图表模块
 register.chartModule(TableChartModule.VCHART, VChart);
+
+// Icon 注册
+register.icon("text-button1", textIcon);

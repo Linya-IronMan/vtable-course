@@ -1,6 +1,6 @@
 import { ColumnsDefine } from "@visactor/vtable";
-import { headerFilterIcon } from "../icon/base";
 import { TableChartModule, TableEditorType } from "../constants";
+import { headerFilterIcon } from "../icon/svg-header-filter";
 
 export const columns: ColumnsDefine = [
 	{
@@ -39,5 +39,11 @@ export const columns: ColumnsDefine = [
 			seriesField: "type",
 		},
 		headerIcon: headerFilterIcon,
+	},
+	{
+		field: "null",
+		title: "text icon",
+		width: "auto",
+		icon: ["text-button1"],
 	},
 ];
