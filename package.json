@@ -11,8 +11,8 @@
 	},
 	"dependencies": {
 		"@visactor/vchart": "^2.0.13",
-		"@visactor/vtable": "1.22.9",
-		"@visactor/vtable-editors": "1.22.9",
+		"@visactor/vtable": "1.22.10",
+		"@visactor/vtable-editors": "1.22.10",
 		"@visactor/vutils": "^1.0.21",
 		"pikaday": "^1.8.2",
 		"react": "^19.2.3",
