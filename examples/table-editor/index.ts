@@ -12,6 +12,7 @@ const option: ListTableConstructorOptions = {
 	defaultRowHeight: 300,
 	defaultHeaderRowHeight: [30],
 	editCellTrigger: "doubleclick",
+	theme: "custom-theme" as any,
 };
 
 const container = document.getElementById("main")!;
