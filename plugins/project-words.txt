@@ -3,4 +3,5 @@ Pikaday
 vchart
 visactor
 vtable
+vutils
 ywasm
