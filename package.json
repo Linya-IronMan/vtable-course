@@ -10,9 +10,9 @@
 		"parcel": "^2.16.3"
 	},
 	"dependencies": {
-		"@visactor/vchart": "^2.0.13",
-		"@visactor/vtable": "1.22.10",
-		"@visactor/vtable-editors": "1.22.10",
+		"@visactor/vchart": "^2.0.14",
+		"@visactor/vtable": "1.22.11",
+		"@visactor/vtable-editors": "1.22.11",
 		"@visactor/vutils": "^1.0.21",
 		"pikaday": "^1.8.2",
 		"react": "^19.2.3",
