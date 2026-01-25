@@ -1,22 +1,22 @@
+<!-- NOTE[epic=初始化启动] 初始化环境准备  -->
+
 # 环境准备
 
-1. 安装依赖
+<!-- NOTE[epic=初始化启动] 安装依赖  -->
 
-    ```bash
-    pnpm install -g @antfu/ni
+1.  安装依赖
 
-    ni
-    ```
+        ````bash
 
-2. 启动项目
-    ```bash
-    nr dev:table-editor
-    ```
-    或者
-    ```bash
-    nr
-    ```
-    之后选择要执行的命令
+            pnpm install -g @antfu/ni
+
+            ni
+
+        ````
+
+<!-- NOTE[epic=初始化启动] 启动项目  -->
+
+2.  启动项目 `bash nr dev:table-editor ` 或者 `bash nr ` 之后选择要执行的命令
 
 # 15 自定义渲染
 
@@ -32,7 +32,7 @@
 
 - 官方编辑器的注册与使用
 - 展示常见的官方编辑器
-  <!-- TODO demo 补充所有官方编辑器效果 -->
+    <!-- TODO demo 补充所有官方编辑器效果 -->
 
 1. 编辑器自定义实现
 2. 编辑数据验证

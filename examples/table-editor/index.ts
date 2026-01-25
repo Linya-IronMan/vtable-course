@@ -5,8 +5,11 @@ import "pikaday/css/pikaday.css";
 
 import "./registry";
 import { ListTableConstructorOptions } from "@visactor/vtable";
+
+// NOTE[epic=编辑器使用介绍,seq=0] 表格的初始化
 const option: ListTableConstructorOptions = {
 	container: document.getElementById("container"),
+	// NOTE[epic=编辑器使用介绍,seq=1] 表格的列配置，会在其中指定编辑器
 	columns,
 	records,
 	defaultRowHeight: 300,

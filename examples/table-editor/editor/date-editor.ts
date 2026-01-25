@@ -4,14 +4,11 @@ import { IEditor } from "@visactor/vtable-editors";
 import Pikaday from "pikaday";
 
 export class DateEditor implements IEditor {
-	editorConfig: any;
 	element?: HTMLInputElement;
 	container?: HTMLElement;
 	successCallback?: Function;
 	picker: any;
-	constructor(editorConfig: any) {
-		this.editorConfig = editorConfig;
-	}
+	constructor() {}
 	onStart({ container, value, referencePosition, endEdit }: EditContext) {
 		const that = this;
 		this.container = container;

@@ -1,5 +1,5 @@
 import { TYPES } from "@visactor/vtable";
-import { ColumnIconOption, TextIcon } from "@visactor/vtable/es/ts-types";
+import { TextIcon } from "@visactor/vtable/es/ts-types";
 
 export const textIcon: TextIcon = {
 	type: "text",
@@ -7,7 +7,6 @@ export const textIcon: TextIcon = {
 	name: "text-button",
 	positionType: TYPES.IconPosition.left,
 	marginLeft: 10,
-	// TODO any
 	style: {
 		cursor: "pointer",
 		fill: "pink",

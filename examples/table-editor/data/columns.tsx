@@ -6,6 +6,7 @@ export const columns: ColumnsDefine = [
 	{
 		title: "name",
 		field: "name",
+		// NOTE[epic=编辑器使用介绍,seq=3] 列配置中通过editor字段指定编辑器
 		editor: (args) => {
 			if (args.row % 2 == 0) return TableEditorType.NAME_EDITOR;
 			else return "name-editor2";
@@ -31,7 +32,6 @@ export const columns: ColumnsDefine = [
 		cellType: "chart",
 		chartModule: TableChartModule.VCHART, // 关联注册的图表模块
 		chartSpec: {
-			// VChart 配置项
 			type: "area",
 			data: { id: "data" }, // 固定配置，数据来源为当前单元格字段
 			xField: "x",
