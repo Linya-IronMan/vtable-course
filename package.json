@@ -10,6 +10,7 @@
 		"parcel": "^2.16.3"
 	},
 	"dependencies": {
+		"@fontsource/roboto": "^5.2.9",
 		"@visactor/vchart": "^2.0.14",
 		"@visactor/vtable": "1.22.11",
 		"@visactor/vtable-editors": "1.22.11",

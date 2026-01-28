@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fontsource/roboto':
+        specifier: ^5.2.9
+        version: 5.2.9
       '@visactor/vchart':
         specifier: ^2.0.14
         version: 2.0.14
@@ -38,6 +41,9 @@ importers:
         version: 2.16.3(@swc/helpers@0.5.18)
 
 packages:
+
+  '@fontsource/roboto@5.2.9':
+    resolution: {integrity: sha512-ZTkyHiPk74B/aj8BZWbsxD5Yu+Lq+nR64eV4wirlrac2qXR7jYk2h6JlLYuOuoruTkGQWNw2fMuKNavw7/rg0w==}
 
   '@lezer/common@1.5.0':
     resolution: {integrity: sha512-PNGcolp9hr4PJdXR4ix7XtixDrClScvtSCYW3rQG106oVMOOI+jFb+0+J3mbeL/53g1Zd6s0kJzaw6Ri68GmAA==}
@@ -1222,6 +1228,8 @@ packages:
     resolution: {integrity: sha512-DEAoo25RfSYMuTGc9vPJzZcZullwIqRDSI9LOy+fkCJPi6hykCnfKaXTuPBDuXAUcqHXyOgFtHNp/kB2FjYHbw==}
 
 snapshots:
+
+  '@fontsource/roboto@5.2.9': {}
 
   '@lezer/common@1.5.0': {}
 

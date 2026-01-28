@@ -44,4 +44,37 @@ export const columns: ColumnsDefine = [
 		width: "auto",
 		icon: ["text-button1"],
 	},
+	// {
+	// 	field: "null",
+	// 	title: "font icon",
+	// 	width: "auto",
+	// 	customLayout: (args) => {
+	// 		const { table, row, col, rect } = args;
+	// 		const { height, width } = rect ?? table.getCellRect(col, row);
+	// 		const u = EnableAIBaseFontIcon.get("csv", "unicode");
+	// 		const root = createGroup({
+	// 			display: "flex",
+	// 			alignContent: "center",
+	// 			alignItems: "center",
+	// 			justifyContent: "center",
+	// 			width,
+	// 			height,
+	// 			cursor: "pointer",
+	// 		});
+
+	// 		const text = createText({
+	// 			text: u,
+	// 			fontSize: 20,
+	// 			fontFamily: EnableAIBaseFontIcon.fontFamily,
+	// 			fill: "red",
+	// 			textBaseline: "alphabetic",
+	// 		});
+	// 		root.add(text);
+
+	// 		return {
+	// 			rootContainer: root,
+	// 			renderDefault: false,
+	// 		};
+	// 	},
+	// },
 ];

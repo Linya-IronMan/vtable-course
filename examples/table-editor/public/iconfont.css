@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 5078475 */
+  src: url('https://at.alicdn.com/t/c/font_5078475_05rtxdjro3ht.woff2?t=1769122605954') format('woff2'),
+       url('https://at.alicdn.com/t/c/font_5078475_05rtxdjro3ht.woff?t=1769122605954') format('woff'),
+       url('https://at.alicdn.com/t/c/font_5078475_05rtxdjro3ht.ttf?t=1769122605954') format('truetype'),
+       url('https://at.alicdn.com/t/c/font_5078475_05rtxdjro3ht.svg?t=1769122605954#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-csv:before {
+  content: "\e6b0";
+}
+
+.icon-mp3:before {
+  content: "\e6b1";
+}
+
+.icon-tag:before {
+  content: "\e6af";
+}
+
+.icon-arrow_down:before {
+  content: "\e6ae";
+}
+
+.icon-single:before {
+  content: "\e6ac";
+}
+
+.icon-drawer:before {
+  content: "\e6ad";
+}
+
+.icon-hyperlink:before {
+  content: "\e696";
+}
+
+.icon-numbered:before {
+  content: "\e6a2";
+}
+
+.icon-upload:before {
+  content: "\e6a3";
+}
+
+.icon-doc:before {
+  content: "\e6a4";
+}
+
+.icon-atachment:before {
+  content: "\e6a5";
+}
+
+.icon-duration:before {
+  content: "\e6a6";
+}
+
+.icon-plus:before {
+  content: "\e6a7";
+}
+
+.icon-json:before {
+  content: "\e6a8";
+}
+
+.icon-docs:before {
+  content: "\e6a9";
+}
+
+.icon-multiple:before {
+  content: "\e6aa";
+}
+
+.icon-date:before {
+  content: "\e6ab";
+}
+
+.icon-text:before {
+  content: "\e69a";
+}
+
+.icon-personnel:before {
+  content: "\e69b";
+}
+
+.icon-image-file:before {
+  content: "\e697";
+}
+
+.icon-more:before {
+  content: "\e699";
+}
+
+.icon-video-file:before {
+  content: "\e69d";
+}
+
+.icon-lock:before {
+  content: "\e69e";
+}
+
+.icon-pdf:before {
+  content: "\e69f";
+}
+
+.icon-list:before {
+  content: "\e6a0";
+}
+
+.icon-ppt:before {
+  content: "\e6a1";
+}
