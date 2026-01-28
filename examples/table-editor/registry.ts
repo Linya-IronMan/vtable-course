@@ -22,8 +22,7 @@ const listEditor = new ListEditor({ values: ["女", "男"] });
 
 const custom_date_editor = new DateEditor();
 
-register.editor(TableEditorType.NAME_EDITOR, inputEditor);
-register.editor(TableEditorType.NUMBER_EDITOR, inputEditor);
+register.editor(TableEditorType.INPUT_EDITOR, inputEditor);
 register.editor(TableEditorType.TEXT_EDITOR, textAreaEditor);
 register.editor(TableEditorType.DATE_EDITOR, dateInputEditor);
 register.editor(TableEditorType.LIST_EDITOR, listEditor);

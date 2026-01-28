@@ -1,4 +1,8 @@
-import { EditContext } from "@visactor/vtable-editors";
+import {
+	EditContext,
+	PrepareEditContext,
+	ValidateEnum,
+} from "@visactor/vtable-editors";
 import { RectProps } from "@visactor/vtable-editors";
 import { IEditor } from "@visactor/vtable-editors";
 import Pikaday from "pikaday";
@@ -62,6 +66,17 @@ export class DateEditor implements IEditor {
 		this.element.style.left = rect.left + "px";
 		this.element.style.width = rect.width + "px";
 		this.element.style.height = rect.height + "px";
+	}
+
+	prepareEdit(context: PrepareEditContext<string, unknown>) {}
+	setValue(value: string) {
+		if (!this.element) return;
+
+		this.element.value = value;
+	}
+	validateValue(newValue?: string, oldValue?: string) {
+		// NOTE: ValidateEnum.invalidateExit 如果返回此枚举，当前editor需要有 setValue 方法，否则会报错
+		return ValidateEnum.invalidateExit;
 	}
 	getValue() {
 		if (!this.element) throw new Error("[getValue] element is nil");

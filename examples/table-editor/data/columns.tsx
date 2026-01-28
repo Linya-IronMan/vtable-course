@@ -7,12 +7,10 @@ export const columns: ColumnsDefine = [
 		title: "name",
 		field: "name",
 		// NOTE[epic=编辑器使用介绍,seq=3] 列配置中通过editor字段指定编辑器
-		editor: (args) => {
-			if (args.row % 2 == 0) return TableEditorType.NAME_EDITOR;
-			else return "name-editor2";
-		},
+		editor: TableEditorType.INPUT_EDITOR,
 	},
-	{ title: "age", field: "age", editor: TableEditorType.NUMBER_EDITOR },
+	// NOTE[epic=编辑器使用介绍,seq=3] 官方暂时没有数字Editor
+	{ title: "age", field: "age", editor: TableEditorType.INPUT_EDITOR },
 	{ title: "gender", field: "gender", editor: TableEditorType.LIST_EDITOR },
 	{ title: "address", field: "address", editor: TableEditorType.TEXT_EDITOR },
 	{
