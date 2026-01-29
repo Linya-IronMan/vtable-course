@@ -1,6 +1,8 @@
 import { ColumnsDefine } from "@visactor/vtable";
 import { TableChartModule, TableEditorType } from "../constants";
 import { headerFilterIcon } from "../icon/svg-header-filter";
+import { createGroup, createText } from "@visactor/vtable/es/vrender";
+import { ICON_FONT_FAMILY } from "../icon/constants";
 
 export const columns: ColumnsDefine = [
 	{
@@ -44,37 +46,37 @@ export const columns: ColumnsDefine = [
 		width: "auto",
 		icon: ["text-button1"],
 	},
-	// {
-	// 	field: "null",
-	// 	title: "font icon",
-	// 	width: "auto",
-	// 	customLayout: (args) => {
-	// 		const { table, row, col, rect } = args;
-	// 		const { height, width } = rect ?? table.getCellRect(col, row);
-	// 		const u = EnableAIBaseFontIcon.get("csv", "unicode");
-	// 		const root = createGroup({
-	// 			display: "flex",
-	// 			alignContent: "center",
-	// 			alignItems: "center",
-	// 			justifyContent: "center",
-	// 			width,
-	// 			height,
-	// 			cursor: "pointer",
-	// 		});
+	{
+		field: "null",
+		title: "font icon",
+		width: "auto",
+		customLayout: (args) => {
+			const { table, row, col, rect } = args;
+			const { height, width } = rect ?? table.getCellRect(col, row);
+			const icon = String.fromCodePoint(parseInt("\e6a5", 16));
+			const root = createGroup({
+				display: "flex",
+				alignContent: "center",
+				alignItems: "center",
+				justifyContent: "center",
+				width,
+				height,
+				cursor: "pointer",
+			});
 
-	// 		const text = createText({
-	// 			text: u,
-	// 			fontSize: 20,
-	// 			fontFamily: EnableAIBaseFontIcon.fontFamily,
-	// 			fill: "red",
-	// 			textBaseline: "alphabetic",
-	// 		});
-	// 		root.add(text);
+			const text = createText({
+				text: icon,
+				fontSize: 20,
+				fontFamily: ICON_FONT_FAMILY,
+				fill: "red",
+				textBaseline: "alphabetic",
+			});
+			root.add(text);
 
-	// 		return {
-	// 			rootContainer: root,
-	// 			renderDefault: false,
-	// 		};
-	// 	},
-	// },
+			return {
+				rootContainer: root,
+				renderDefault: false,
+			};
+		},
+	},
 ];
