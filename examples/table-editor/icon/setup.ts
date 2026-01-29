@@ -6,7 +6,7 @@ const iconPool = [
 	"url('https://at.alicdn.com/t/c/font_5078475_05rtxdjro3ht.ttf?t=1769122605954') format('truetype')",
 	"url('https://at.alicdn.com/t/c/font_5078475_05rtxdjro3ht.svg?t=1769122605954#iconfont') format('svg')",
 ];
-export const iconSetup = async () => {
+export const textIconSetup = async () => {
 	const face = new FontFace(ICON_FONT_FAMILY, iconPool.join(", "));
 	const loaded = await face.load();
 	document.fonts.add(loaded);

@@ -1,6 +1,6 @@
 import { register } from "@visactor/vtable";
 import VChart from "@visactor/vchart";
-import { iconSetup } from "./icon/setup";
+import { textIconSetup } from "./icon/setup";
 
 // NOTE[epic=编辑器使用介绍,seq=6] 使用官方编辑器前需要安装对应依赖
 import {
@@ -35,7 +35,7 @@ export const setUp = async () => {
 
 	// Icon 注册
 
-	await iconSetup();
+	await textIconSetup();
 	register.icon("text-button1", textIcon);
 
 	// 主题注册
