@@ -14,8 +14,10 @@ import { DateEditor } from "./editor/date-editor";
 import { TableChartModule, TableEditorType } from "./constants";
 import { textIcon } from "./icon/text-icon";
 import { theme } from "./theme/base";
+import { CustomInputEditor } from "./editor/input-editor";
 
 // NOTE[epic=编辑器使用介绍,seq=5] 编辑器实例化及注册，系统编辑器，文本、日期、列表
+const numberEditor = new CustomInputEditor();
 const inputEditor = new InputEditor();
 const textAreaEditor = new TextAreaEditor();
 const dateInputEditor = new DateInputEditor();
@@ -25,6 +27,7 @@ const custom_date_editor = new DateEditor();
 
 export const setUp = async () => {
 	register.editor(TableEditorType.INPUT_EDITOR, inputEditor);
+	register.editor(TableEditorType.NUMBER_EDITOR, numberEditor);
 	register.editor(TableEditorType.TEXT_EDITOR, textAreaEditor);
 	register.editor(TableEditorType.DATE_EDITOR, dateInputEditor);
 	register.editor(TableEditorType.LIST_EDITOR, listEditor);

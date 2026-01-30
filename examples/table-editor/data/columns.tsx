@@ -12,7 +12,7 @@ export const columns: ColumnsDefine = [
 		editor: TableEditorType.INPUT_EDITOR,
 	},
 	// NOTE[epic=编辑器使用介绍,seq=3] 官方暂时没有数字Editor
-	{ title: "age", field: "age", editor: TableEditorType.INPUT_EDITOR },
+	{ title: "age", field: "age", editor: TableEditorType.NUMBER_EDITOR },
 	{ title: "gender", field: "gender", editor: TableEditorType.LIST_EDITOR },
 	{ title: "address", field: "address", editor: TableEditorType.TEXT_EDITOR },
 	{

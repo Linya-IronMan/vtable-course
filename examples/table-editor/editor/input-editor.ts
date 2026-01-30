@@ -1,9 +1,16 @@
-import { IEditor } from "@visactor/vtable-editors";
+import {
+	CellAddress,
+	EditContext,
+	IEditor,
+	PrepareEditContext,
+	RectProps,
+	ValidateEnum,
+} from "@visactor/vtable-editors";
 
 export interface InputEditorConfig {
 	readonly?: boolean;
 }
-export class InputEditor implements IEditor {
+export class CustomInputEditor implements IEditor {
 	editorType: string = "Input";
 	editorConfig?: InputEditorConfig;
 	container?: HTMLElement;
@@ -15,7 +22,13 @@ export class InputEditor implements IEditor {
 	// 存储事件处理器，用于在移除元素前解绑
 	protected eventHandlers: Array<{ type: string; handler: EventListener }> =
 		[];
-	constructor(editorConfig?: InputEditorConfig) {
+	constructor(
+		editorConfig?: InputEditorConfig,
+		/**
+		 * input[type]
+		 */
+		public type?: string,
+	) {
 		this.editorConfig = editorConfig;
 	}
 
@@ -24,7 +37,7 @@ export class InputEditor implements IEditor {
 		this.eventHandlers = [];
 
 		const input = document.createElement("input");
-		input.setAttribute("type", "text");
+		input.setAttribute("type", this.type ?? "text");
 
 		if (this.editorConfig?.readonly) {
 			input.setAttribute("readonly", `${this.editorConfig.readonly}`);
@@ -66,6 +79,7 @@ export class InputEditor implements IEditor {
 		this.eventHandlers.push({ type: "blur", handler: blurHandler });
 		// #endregion
 		this.element = input;
+		if (!this.container) throw new Error("container is required");
 		this.container.appendChild(input);
 
 		// 监听键盘事件
@@ -93,6 +107,7 @@ export class InputEditor implements IEditor {
 		const pasteHandler: EventListener = (e: Event) => {
 			const pasteEvent = e as ClipboardEvent;
 			// 在prepare阶段（opacity为'0'时）禁止粘贴
+			if (!this.element) throw new Error("element is required");
 			if (this.element.style.opacity === "0") {
 				pasteEvent.preventDefault();
 			}
@@ -102,10 +117,12 @@ export class InputEditor implements IEditor {
 	}
 
 	setValue(value: string) {
+		if (!this.element) throw new Error("element is required");
 		this.element.value = typeof value !== "undefined" ? value : "";
 	}
 
 	getValue() {
+		if (!this.element) throw new Error("element is required");
 		return this.element.value;
 	}
 	/**
@@ -131,10 +148,13 @@ export class InputEditor implements IEditor {
 			this.createElement();
 		} else {
 			if (!container.contains(this.element)) {
+				if (!this.element.parentElement)
+					throw new Error("element parentElement is required");
 				this.element.parentElement.removeChild(this.element);
 				this.container.appendChild(this.element);
 			}
 		}
+		if (!this.element) throw new Error("element is required");
 		this.element.style.opacity = "0";
 		//这个pointerEvents = 'none'很重要，如果没有的话会引起vtable.getElement()元素和这里的element元素的focus和blur的切换，
 		//也会引起mouseleave_table mouseleave_cell和mouseenter的切换
@@ -165,6 +185,8 @@ export class InputEditor implements IEditor {
 			}
 		} else {
 			if (!container.contains(this.element)) {
+				if (!this.element.parentElement)
+					throw new Error("element parentElement is required");
 				this.element.parentElement.removeChild(this.element);
 				this.container.appendChild(this.element);
 			}
@@ -173,6 +195,7 @@ export class InputEditor implements IEditor {
 			this.setValue(value);
 		}
 		//防止调用过prepareEdit 后，元素的显示和可操作性被影响
+		if (!this.element) throw new Error("element is required");
 		this.element.style.opacity = "1";
 		this.element.style.pointerEvents = "auto";
 		this.element.focus();
@@ -187,6 +210,7 @@ export class InputEditor implements IEditor {
 		const width = rect.width + borderWidth;
 		const height = rect.height + borderWidth;
 
+		if (!this.element) throw new Error("element is required");
 		this.element.style.top = top + "px";
 		this.element.style.left = left + "px";
 		this.element.style.width = width + "px";
