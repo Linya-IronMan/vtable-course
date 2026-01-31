@@ -1,8 +1,13 @@
 import { ColumnsDefine } from "@visactor/vtable";
 import { TableChartModule, TableEditorType } from "../constants";
-import { headerFilterIcon } from "../icon/svg-header-filter";
-import { createGroup, createText } from "@visactor/vtable/es/vrender";
+import {
+	createGroup,
+	createImage,
+	createText,
+} from "@visactor/vtable/es/vrender";
 import { ICON_FONT_FAMILY } from "../icon/constants";
+import { headerFilterIcon } from "../icon/icon-svg-header-filter";
+import { createIconPath } from "../icon/utils";
 
 export const columns: ColumnsDefine = [
 	{
@@ -47,6 +52,24 @@ export const columns: ColumnsDefine = [
 		icon: ["text-button1"],
 	},
 	{
+		field: "svg-icon",
+		title: "font icon path",
+		width: "auto",
+		icon: ["icon-arrow_down"],
+	},
+	{
+		field: "image-icon",
+		title: "image icon path",
+		width: "auto",
+		icon: ["image-icon"],
+	},
+	{
+		field: "svg-symbol-icon",
+		title: "svg icon symbol",
+		width: "auto",
+		icon: ["svg-symbol-icon"],
+	},
+	{
 		field: "null",
 		title: "font icon",
 		width: "auto",
@@ -58,7 +81,7 @@ export const columns: ColumnsDefine = [
 				display: "flex",
 				alignContent: "center",
 				alignItems: "center",
-				justifyContent: "center",
+				justifyContent: "space-between",
 				width,
 				height,
 				cursor: "pointer",
@@ -71,7 +94,13 @@ export const columns: ColumnsDefine = [
 				fill: "red",
 				textBaseline: "alphabetic",
 			});
+			const imageIcon = createImage({
+				image: createIconPath("icon-mp3"),
+				width: 20,
+				height: 20,
+			});
 			root.add(text);
+			root.add(imageIcon);
 
 			return {
 				rootContainer: root,

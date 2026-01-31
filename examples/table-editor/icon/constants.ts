@@ -1,1 +1,1 @@
-export const ICON_FONT_FAMILY = "base-iconfont";
+export const ICON_FONT_FAMILY = "base-iconfont-family";
