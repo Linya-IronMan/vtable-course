@@ -1,5 +1,5 @@
 import * as VTable from "@visactor/vtable";
-import { columns } from "./data/columns";
+import { getColumns } from "./data/columns";
 import { records } from "./data/records";
 import "pikaday/css/pikaday.css";
 
@@ -12,7 +12,7 @@ setUp().then(() => {
 	const option: ListTableConstructorOptions = {
 		container: document.getElementById("container"),
 		// NOTE[epic=编辑器使用介绍,seq=1] 表格的列配置，会在其中指定编辑器
-		columns,
+		columns: getColumns(),
 		records,
 		defaultRowHeight: 300,
 		defaultHeaderRowHeight: [30],

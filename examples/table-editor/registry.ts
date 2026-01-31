@@ -17,7 +17,7 @@ import { CustomInputEditor } from "./editor/input-editor";
 import { textIcon } from "./icon/icon-text";
 import { svgIcon } from "./icon/icon-path";
 import { imageIcon } from "./icon/icon-image";
-import { svgSymbolIcon } from "./icon/icon-svg-symbol-icon";
+import { getSvgSymbolIcon } from "./icon/icon-svg-symbol-icon";
 
 // NOTE[epic=编辑器使用介绍,seq=5] 编辑器实例化及注册，系统编辑器，文本、日期、列表
 const numberEditor = new CustomInputEditor({}, "number");
@@ -45,7 +45,7 @@ export const setUp = async () => {
 	register.icon("text-button1", textIcon);
 	register.icon("icon-arrow_down", svgIcon as any);
 	register.icon("image-icon", imageIcon);
-	register.icon("svg-symbol-icon", svgSymbolIcon);
+	register.icon("svg-symbol-icon", getSvgSymbolIcon("icon-csv"));
 
 	// 主题注册
 	register.theme("custom-theme", theme);
