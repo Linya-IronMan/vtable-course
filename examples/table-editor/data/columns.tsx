@@ -1,16 +1,13 @@
-import { ColumnsDefine } from "@visactor/vtable";
 import { TableChartModule, TableEditorType } from "../constants";
 import {
 	createGroup,
-	createImage,
 	createSymbol,
 	createText,
-	graphicCreator,
 } from "@visactor/vtable/es/vrender";
 import { ICON_FONT_FAMILY } from "../icon/constants";
 import { headerFilterIcon } from "../icon/icon-svg-header-filter";
-import { svgBackground } from "../public/svg-background";
 import { createSvgIcon } from "../icon/utils";
+import type { ColumnsDefine } from "@visactor/vtable";
 
 export const getColumns = () => {
 	const columns: ColumnsDefine = [
@@ -127,8 +124,3 @@ export const getColumns = () => {
 
 	return columns;
 };
-function createIconPath(
-	arg0: string,
-): string | HTMLImageElement | HTMLCanvasElement | undefined {
-	throw new Error("Function not implemented.");
-}

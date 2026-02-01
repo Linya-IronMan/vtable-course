@@ -1,11 +1,11 @@
 import * as VTable from "@visactor/vtable";
-import { getColumns } from "./data/columns";
 import { records } from "./data/records";
 import "pikaday/css/pikaday.css";
 
-import { ListTableConstructorOptions } from "@visactor/vtable";
+import type { ListTableConstructorOptions } from "@visactor/vtable";
 import "./registry";
 import { setUp } from "./registry";
+import { getColumns } from "./data/columns";
 
 // NOTE[epic=编辑器使用介绍,seq=0] 表格的初始化
 setUp().then(() => {

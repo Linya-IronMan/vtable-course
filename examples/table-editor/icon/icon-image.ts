@@ -1,5 +1,5 @@
 import { TYPES } from "@visactor/vtable";
-import { ImageIcon } from "@visactor/vtable/es/ts-types";
+import type { ImageIcon } from "@visactor/vtable/es/ts-types";
 
 export const imageIcon: ImageIcon = {
 	type: "image",

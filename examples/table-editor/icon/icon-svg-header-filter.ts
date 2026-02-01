@@ -1,5 +1,5 @@
 import * as VTable from "@visactor/vtable";
-import { IBasicHeaderDefine } from "@visactor/vtable/es/ts-types/list-table/define/basic-define";
+import type { IBasicHeaderDefine } from "@visactor/vtable/es/ts-types/list-table/define/basic-define";
 export const headerFilterIcon: IBasicHeaderDefine["headerIcon"] = [
 	{
 		type: "svg", //指定svg格式图标，其他还支持path，image

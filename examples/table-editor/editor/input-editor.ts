@@ -1,9 +1,9 @@
 import {
-	CellAddress,
-	EditContext,
-	IEditor,
-	PrepareEditContext,
-	RectProps,
+	type CellAddress,
+	type EditContext,
+	type IEditor,
+	type PrepareEditContext,
+	type RectProps,
 	ValidateEnum,
 } from "@visactor/vtable-editors";
 

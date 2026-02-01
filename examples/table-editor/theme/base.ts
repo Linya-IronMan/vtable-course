@@ -1,4 +1,4 @@
-import { ITableThemeDefine, TableTheme } from "@visactor/vtable/es/themes";
+import type { ITableThemeDefine } from "@visactor/vtable/es/themes";
 
 export const theme: ITableThemeDefine = {
 	//默认样式，如bodyStyle或者headerStyle未设置某项配置则从这里获取相应样式

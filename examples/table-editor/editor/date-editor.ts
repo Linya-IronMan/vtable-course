@@ -1,16 +1,16 @@
 import {
-	EditContext,
-	PrepareEditContext,
+	type EditContext,
+	type PrepareEditContext,
 	ValidateEnum,
 } from "@visactor/vtable-editors";
-import { RectProps } from "@visactor/vtable-editors";
-import { IEditor } from "@visactor/vtable-editors";
+import type { RectProps } from "@visactor/vtable-editors";
+import type { IEditor } from "@visactor/vtable-editors";
 import Pikaday from "pikaday";
 
 export class DateEditor implements IEditor {
 	element?: HTMLInputElement;
 	container?: HTMLElement;
-	successCallback?: Function;
+	successCallback?: (payload: any) => void;
 	picker: any;
 	constructor() {}
 	onStart({ container, value, referencePosition, endEdit }: EditContext) {
@@ -50,7 +50,7 @@ export class DateEditor implements IEditor {
 			},
 			onSelect: function () {
 				const date = this.getDate();
-				that.successCallback?.();
+				that.successCallback?.(date);
 			},
 		});
 		this.picker = picker;

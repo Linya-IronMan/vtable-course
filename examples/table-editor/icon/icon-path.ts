@@ -1,5 +1,5 @@
 import { TYPES } from "@visactor/vtable";
-import { SvgIcon } from "@visactor/vtable/es/ts-types";
+import type { SvgIcon } from "@visactor/vtable/es/ts-types";
 
 export const svgIcon: SvgIcon = {
 	type: "svg",
