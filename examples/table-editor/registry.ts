@@ -18,7 +18,6 @@ import { textIcon } from "./icon/icon-text";
 import { svgIcon } from "./icon/icon-path";
 import { imageIcon } from "./icon/icon-image";
 import { getSvgSymbolIcon } from "./icon/icon-svg-symbol-icon";
-import { headerFrozenIcon } from "./icon/icon-svg-header-filter";
 
 // NOTE[epic=编辑器使用介绍,seq=5] 编辑器实例化及注册，系统编辑器，文本、日期、列表
 const numberEditor = new CustomInputEditor({}, "number");

@@ -31,10 +31,3 @@ setUp().then(() => {
 		}
 	});
 });
-
-fetch("/iconfont.js")
-	.then((res) => res.text())
-	.then((text) => {
-		console.log("前100个字符:", text.substring(0, 100));
-		console.log("内容开头是:", text.startsWith("<") ? "HTML" : "JS");
-	});
