@@ -17,7 +17,8 @@ setUp().then(() => {
 		defaultRowHeight: 300,
 		defaultHeaderRowHeight: [30],
 		editCellTrigger: "doubleclick",
-		theme: "custom-theme" as any,
+		// theme: "custom-theme" as any,
+		frozenColCount: 3,
 	};
 	const container = document.getElementById("main")!;
 
@@ -30,3 +31,10 @@ setUp().then(() => {
 		}
 	});
 });
+
+fetch("/iconfont.js")
+	.then((res) => res.text())
+	.then((text) => {
+		console.log("前100个字符:", text.substring(0, 100));
+		console.log("内容开头是:", text.startsWith("<") ? "HTML" : "JS");
+	});

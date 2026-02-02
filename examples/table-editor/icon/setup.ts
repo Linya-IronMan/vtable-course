@@ -12,7 +12,12 @@ export const textIconSetup = async () => {
 	document.fonts.add(loaded);
 };
 
-export const svgIconSetup = (url = "/iconfont.js") => {
+const iconfontUrl = new URL(
+	"../public/iconfont.js",
+	import.meta.url,
+).toString();
+
+export const svgIconSetup = (url = iconfontUrl) => {
 	return new Promise((resolve, reject) => {
 		// 1. 检查是否已经加载过
 		const existingScript = document.querySelector(`script[src="${url}"]`);

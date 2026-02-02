@@ -5,7 +5,6 @@ import {
 	createText,
 } from "@visactor/vtable/es/vrender";
 import { ICON_FONT_FAMILY } from "../icon/constants";
-import { headerFilterIcon } from "../icon/icon-svg-header-filter";
 import { createSvgIcon } from "../icon/utils";
 import type { ColumnsDefine } from "@visactor/vtable";
 
@@ -52,7 +51,7 @@ export const getColumns = () => {
 				yField: "y",
 				seriesField: "type",
 			},
-			headerIcon: headerFilterIcon,
+			// headerIcon: headerFilterIcon,
 		},
 		{
 			field: "null",
