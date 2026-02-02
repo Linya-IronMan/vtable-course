@@ -4,11 +4,11 @@ import "pikaday/css/pikaday.css";
 
 import type { ListTableConstructorOptions } from "@visactor/vtable";
 import "./registry";
-import { setUp } from "./registry";
+import { setup } from "./registry";
 import { getColumns } from "./data/columns";
 
 // NOTE[epic=编辑器使用介绍,seq=0] 表格的初始化
-setUp().then(() => {
+setup().then(() => {
 	const option: ListTableConstructorOptions = {
 		container: document.getElementById("container"),
 		// NOTE[epic=编辑器使用介绍,seq=1] 表格的列配置，会在其中指定编辑器

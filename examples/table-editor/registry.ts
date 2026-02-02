@@ -28,7 +28,7 @@ const listEditor = new ListEditor({ values: ["女", "男"] });
 
 const custom_date_editor = new DateEditor();
 
-export const setUp = async () => {
+export const setup = async () => {
 	register.editor(TableEditorType.INPUT_EDITOR, inputEditor);
 	register.editor(TableEditorType.NUMBER_EDITOR, numberEditor);
 	register.editor(TableEditorType.TEXT_EDITOR, textAreaEditor);
