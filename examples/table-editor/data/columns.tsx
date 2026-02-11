@@ -57,6 +57,7 @@ export const getColumns = () => {
 			field: "null",
 			title: "text icon",
 			width: "auto",
+			headerIcon: ["text-button1"],
 			icon: ["text-button1"],
 		},
 		{

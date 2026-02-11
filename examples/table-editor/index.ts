@@ -17,7 +17,7 @@ setup().then(() => {
 		defaultRowHeight: 300,
 		defaultHeaderRowHeight: [30],
 		editCellTrigger: "doubleclick",
-		// theme: "custom-theme" as any,
+		theme: "custom-theme" as any,
 		frozenColCount: 3,
 	};
 	const container = document.getElementById("main")!;

@@ -55,6 +55,7 @@ export class DateEditor implements IEditor {
 		});
 		this.picker = picker;
 		if (referencePosition?.rect) {
+			// 获取到当前单元格的位置信息，调整日期选择器的位置
 			this.adjustPosition(referencePosition.rect);
 		}
 		this.picker.show();
@@ -64,6 +65,7 @@ export class DateEditor implements IEditor {
 		if (!this.element) throw new Error("[adjustPosition] element is nil");
 		this.element.style.top = rect.top + "px";
 		this.element.style.left = rect.left + "px";
+		// 调整日期选择器的宽度和高度与单元格一致
 		this.element.style.width = rect.width + "px";
 		this.element.style.height = rect.height + "px";
 	}
@@ -71,11 +73,11 @@ export class DateEditor implements IEditor {
 	prepareEdit(context: PrepareEditContext<string, unknown>) {}
 	setValue(value: string) {
 		if (!this.element) return;
-
 		this.element.value = value;
 	}
 	validateValue(newValue?: string, oldValue?: string) {
 		// NOTE: ValidateEnum.invalidateExit 如果返回此枚举，当前editor需要有 setValue 方法，否则会报错
+		// NOTE: exit 会调用 onEnd 方法，清除一些副作用，退出编辑
 		return ValidateEnum.invalidateExit;
 	}
 	getValue() {
@@ -83,12 +85,15 @@ export class DateEditor implements IEditor {
 		return this.element.value;
 	}
 	onEnd() {
+		//清除一些副作用，例如日期选择器的实例
+		// validateValue 即使无效，也会执行onEnd
 		if (!this.element) throw new Error("[onEnd] element is nil");
 		if (!this.container) throw new Error("[onEnd] container is nil");
 		this.picker.destroy();
 		this.container.removeChild(this.element);
 	}
 	isEditorElement(target: HTMLElement) {
+		// 判断点击位置是否在日期编辑器上，确定是否需要退出编辑
 		if (target === this.element || this.picker.el.contains(target)) {
 			return true;
 		}
