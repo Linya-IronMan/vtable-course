@@ -28,26 +28,39 @@ const listEditor = new ListEditor({ values: ["女", "男"] });
 
 const custom_date_editor = new DateEditor();
 
+let setupPromise: Promise<void> | undefined;
+
 export const setup = async () => {
-	register.editor(TableEditorType.INPUT_EDITOR, inputEditor);
-	register.editor(TableEditorType.NUMBER_EDITOR, numberEditor);
-	register.editor(TableEditorType.TEXT_EDITOR, textAreaEditor);
-	register.editor(TableEditorType.DATE_EDITOR, dateInputEditor);
-	register.editor(TableEditorType.LIST_EDITOR, listEditor);
-	register.editor(TableEditorType.CUSTOM_DATE_EDITOR, custom_date_editor);
+	if (setupPromise) {
+		return setupPromise;
+	}
 
-	// 注册 vchart 图表模块
-	register.chartModule(TableChartModule.VCHART, VChart);
+	setupPromise = (async () => {
+		register.editor(TableEditorType.INPUT_EDITOR, inputEditor);
+		register.editor(TableEditorType.NUMBER_EDITOR, numberEditor);
+		register.editor(TableEditorType.TEXT_EDITOR, textAreaEditor);
+		register.editor(TableEditorType.DATE_EDITOR, dateInputEditor);
+		register.editor(TableEditorType.LIST_EDITOR, listEditor);
+		register.editor(
+			TableEditorType.CUSTOM_DATE_EDITOR,
+			custom_date_editor,
+		);
 
-	// Icon 注册
-	await svgIconSetup();
-	await textIconSetup();
-	// register.icon("freeze", headerFrozenIcon);
-	register.icon("text-button1", textIcon);
-	register.icon("icon-arrow_down", svgIcon as any);
-	register.icon("image-icon", imageIcon);
-	register.icon("svg-symbol-icon", getSvgSymbolIcon("icon-csv"));
+		// 注册 vchart 图表模块
+		register.chartModule(TableChartModule.VCHART, VChart);
 
-	// 主题注册
-	register.theme("custom-theme", theme);
+		// Icon 注册
+		await svgIconSetup();
+		await textIconSetup();
+		// register.icon("freeze", headerFrozenIcon);
+		register.icon("text-button1", textIcon);
+		register.icon("icon-arrow_down", svgIcon as any);
+		register.icon("image-icon", imageIcon);
+		register.icon("svg-symbol-icon", getSvgSymbolIcon("icon-csv"));
+
+		// 主题注册
+		register.theme("custom-theme", theme);
+	})();
+
+	return setupPromise;
 };

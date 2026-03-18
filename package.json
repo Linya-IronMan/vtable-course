@@ -3,7 +3,6 @@
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
-		"dev:table-editor": "cd examples/table-editor && parcel index.html",
 		"type-check": "node --max-old-space-size=4096 ./node_modules/typescript/lib/tsc.js --build",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
@@ -12,7 +11,6 @@
 		"@types/pikaday": "^1.7.10",
 		"@types/react": "^19.2.10",
 		"@types/react-dom": "^19.2.3",
-		"parcel": "^2.16.3",
 		"storybook": "^10.2.8",
 		"@storybook/react-vite": "^10.2.8",
 		"@storybook/addon-vitest": "^10.2.8",

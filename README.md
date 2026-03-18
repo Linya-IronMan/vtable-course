@@ -16,7 +16,7 @@
 
 <!-- NOTE[epic=初始化启动] 启动项目  -->
 
-2.  启动项目 `nr dev:table-editor ` 或者 `nr ` 之后选择要执行的命令
+2.  启动项目 `nr storybook` 或者 `nr` 之后选择要执行的命令
 
 # 类型检查
 

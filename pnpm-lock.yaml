@@ -66,9 +66,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^4.0.18
         version: 4.0.18(@vitest/browser@4.0.18(vite@7.3.1(lightningcss@1.30.2))(vitest@4.0.18))(vitest@4.0.18)
-      parcel:
-        specifier: ^2.16.3
-        version: 2.16.3(@swc/helpers@0.5.18)
       playwright:
         specifier: ^1.58.2
         version: 1.58.2
